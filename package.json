@@ -1,0 +1,25 @@
+{
+  "name": "i-am-carim",
+  "version": "1.0.0",
+  "description": "Personal portfolio for Carim A",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarimA/i-am-carim.git"
+  },
+  "author": "Carim A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarimA/i-am-carim/issues"
+  },
+  "homepage": "https://github.com/CarimA/i-am-carim#readme",
+  "dependencies": {
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.3"
+  }
+}
