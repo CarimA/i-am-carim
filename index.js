@@ -43,6 +43,7 @@ if (cluster.isMaster) {
     
     app.use(require('morgan')('dev'));
     app.use(require('compression')());
+    app.use(require('force-ssl-heroku'));
     
     app.use('/', express.static(path.join(__dirname, 'public')));
     

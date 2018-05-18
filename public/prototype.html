@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+            
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-family: Roboto, sans-serif;
+
+                line-height: 1.5;
+                letter-spacing: 1px;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            body {
+                background: #edebe8;
+            }
+
+            main {
+                width: 100%;
+                max-width: 1080px;
+                display: flex;
+                height: 100%;
+                background: #ffffff;
+            }
+
+            nav {
+                width: 280px;
+                min-width: 280px;
+                padding: 3em;
+                background: #e21b5d;
+                color: #ffffff;
+
+                display:flex;                
+                flex-direction: column;
+            }
+
+            nav .avatar {
+                display: block;
+                width: 70%;
+                padding-bottom: 70%;
+                margin: auto;
+                height: 0;
+                background: url('http://via.placeholder.com/350x350');
+                background-size: cover;
+                margin-top: 2em;
+                margin-bottom: 1.5em;
+                border-radius: 100%;
+            }
+
+            nav h1, nav h2 {
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0;
+            }
+
+            nav h1 {
+                font-size: 1.2em;
+                line-height: 1;
+            }
+
+            nav h2 {
+                font-weight: 300;
+                font-size: 0.85em;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                padding: 0;
+            }
+        
+            nav ul li {
+
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 0.85em;
+            }
+
+            nav hr {
+                border: none;
+                border-bottom: 1px solid #ffffff;
+            }
+
+            article {
+                padding: 3em;
+                color: #555555;
+            }
+
+            article h1 {
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            article p {
+                font-size: 0.85em;
+            }
+
+            article .timeline {
+                width: 100%;
+                display: flex;
+            }
+
+            article .timeline .time {
+                position: relative;
+                width: 15%;
+                min-width: 15%;
+                border-right: 1px solid #dddddd;
+                margin-right: 1em;
+                padding-right: 1em;
+                padding-top: 1em;
+            }
+            
+            article .timeline .time::after {
+                position: absolute;
+                margin-right: -5px;
+                right: 0;
+                top: 2em;
+                margin-top: 2px;
+                background: #e21b5d;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                content: '';
+                display: block;
+                
+            }
+            article .timeline .time p {
+                text-align: right;
+            }
+
+
+            article .timeline .content {
+                flex-grow: 1;
+                display: flex;
+                border-top: 1px solid #dddddd;
+            }
+
+            article .timeline .content .text {
+                width: 100%;
+            }
+
+            article .timeline .content .text h1 {
+                margin-top: 0.8em;
+                margin-bottom: 0em;
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+
+            article .timeline .content .text h2 {
+                margin-top: 0em;
+                font-size: 1.15em;
+                font-weight: 400;
+            }
+
+            article .timeline .content .text p {
+                margin-top: 0em;
+                font-size: 0.95em;
+                font-weight: 300;
+            }
+
+            article .timeline .content .text a {
+                background: #e21b5d;
+                color: #ffffff;
+                font-size: 0.95em;
+                font-weight: 300;
+                padding: 0.5em 1em;
+                display: inline-block;
+                text-decoration: none;
+                margin-bottom: 1em;
+            }
+
+            article .timeline .content .image {
+                width: 50%;
+                min-width: 50%;
+                margin-left: 1em;
+            }
+
+            article .timeline .content .image img {
+                width: 100%;
+                display: block;
+                padding: 1em;
+            }
+
+            @media (max-width:600px) {
+                main {
+                    flex-direction: column;
+                }
+
+                nav {
+                    width: 100%;
+                    padding: 1em;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                nav .avatar {
+                    width: 40%;
+                    min-width: 0px;
+                    padding-bottom: 40%;
+                    margin-top: 0em;
+                    margin-bottom: 1em;
+                    margin-left: 0;
+                    display: none;
+                }
+
+                nav h1, nav h2 {
+                    text-align: left;
+                }
+
+                nav ul {
+                    text-align: right;
+                    margin-left: 2em;
+                }
+
+                article .timeline .time {
+                    display: none;
+                }
+
+                article .timeline .content {
+                    flex-direction: column-reverse;
+                }
+                article .timeline .content .text h1  {
+                    margin-top: 0;
+                }
+                article .timeline .content .image {
+                    width: 100%;
+                    min-width: 100%;
+                    margin-left: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main> 
+            <nav>
+                <div class="nav_wrapper">
+                    <div class="avatar"></div>
+                    <h1>Carim Akeju</h1>
+                    <h2>Full-Stack Developer</h2>
+                </div>
+                <ul>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <br>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Personal Blog</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>Portfolio</h1>
+                <p>This is a sequence of all of my past work. Most of it was done in my own time, some of it in academia and the rest profesionally.</p>
+                <div class="timeline">
+                    <div class="time">
+                        <p>Currently</p> 
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                                <h1>Iron Prelude</h1>
+                                <h2>Here is some tagline about it</h2>
+                                <p>Here is some more filler text. Lorem ipsum dolor sit amet.</p>
+                                <p>Vestibulum auctor metus in velit tincidunt, et posuere magna pellentesque. Vestibulum et sollicitudin diam. Proin eu eleifend felis. Integer sit amet congue turpis. Pellentesque ut felis commodo nisl tempus viverra sed eget ipsum. Curabitur vitae mattis quam, quis dapibus felis. Vivamus et dolor rutrum lorem vehicula iaculis. Pellentesque in tortor vel justo ornare lobortis. Nunc cursus fringilla gravida.</p>
+                                <p>Vestibulum nec dapibus mauris. Morbi placerat convallis laoreet. Curabitur sed libero euismod, mattis eros sed, aliquam ex. Etiam gravida aliquam neque quis commodo. Etiam et lacus dolor. Vivamus dictum cursus tortor, id ultrices felis pulvinar in. Suspendisse ante eros, finibus ac tellus nec, mattis pharetra enim. Nullam quam nisi, tincidunt eget nisl at, efficitur pellentesque ligula.</p>
+                                <a href="#">Read More</a>
+                        </div>
+                        <div class="image">
+                            <img src="http://via.placeholder.com/200x50" />
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline">
+                        <div class="time">
+                            <p>Currently</p> 
+                        </div>
+                        <div class="content">
+                            <div class="text">
+                                    <h1>Iron Prelude</h1>
+                                    <h2>Here is some tagline about it</h2
+                                    <p></p>
+    
+                            </div>
+                            <div class="image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                            <div class="time">
+                                <p>Currently</p> 
+                            </div>
+                            <div class="content">
+                                <div class="text">
+                                        <h1>Iron Prelude</h1>
+                                        <h2>Here is some tagline about it</h2
+                                        <p></p>
+        
+                                </div>
+                                <div class="image">
+                                </div>
+                            </div>
+                        </div>
+            </article>
+        </main>
+    </body>
+</html>
