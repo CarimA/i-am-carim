@@ -47,7 +47,7 @@ if (cluster.isMaster) {
     app.use('/', express.static(path.join(__dirname, 'public')));
     
     app.use('/', (req, res, next) => {
-        res.send('Hello world');
+        res.send('Hello world! Right now, I am still working on this site, but you can check out a prototype at << http://i-am-car.im/prototype.html >>, check out my GitHub repository at << https://github.com/CarimA >>, or send me an email at << hello@i-am-car.im >>!');
     })
     
     let port = process.env.PORT || 3000;
